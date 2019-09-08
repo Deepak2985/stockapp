@@ -1,1 +1,26 @@
-<h1>{{stuff}}</h1>
+{{#if data.error}}
+<div class="alert alert-danger" role="alert">
+  {{data.error}}
+</div>
+{{/if}}
+
+
+{{#if data.companyName}}
+<div class="card" style="max-width: 100%;">
+    <h3 class="card-header">{{ data.companyName }} ({{data.symbol}})</h3>
+    <div class="card-body px-1 py-2">
+         <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Company Name : </strong>{{ data.companyName}}</li>
+            <li class="list-group-item"><strong>Company Symbol : </strong>{{ data.symbol}}</li>
+            <li class="list-group-item"><strong>Latest Price : </strong>{{ data.latestPrice}}</li>
+            <li class="list-group-item"><strong>High : </strong>{{ data.high}}</li>
+            <li class="list-group-item"><strong>Low : </strong>{{ data.low}}</li>
+            <li class="list-group-item"><strong>Previous Close : </strong>{{ data.previousClose}}</li>
+            <li class="list-group-item"><strong>Market Cap : </strong>{{ data.marketCap}}</li>
+            <li class="list-group-item"><strong>Week 52 Low : </strong>{{ data.week52High}}</li>
+            <li class="list-group-item"><strong>Week 52 High : </strong>{{ data.week52Low}}</li>
+        </ul>
+    </div>
+</div>
+{{/if}}
+
